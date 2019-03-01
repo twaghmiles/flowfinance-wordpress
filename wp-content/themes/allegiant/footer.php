@@ -4,9 +4,6 @@
 
 			<?php do_action( 'cpotheme_before_footer' ); ?>
 			<footer id="footer" class="footer secondary-color-bg dark">
-				<div class="container">
-					<?php do_action( 'cpotheme_footer' ); ?>
-				</div>
 			</footer>
 			<?php do_action( 'cpotheme_after_footer' ); ?>
 
