@@ -691,6 +691,14 @@ LAYOUT
 .sidebar-double .main-container {
 }
 
+.font-color-red {
+    color: #e20613;
+}
+
+.text-center {
+    text-align: center;
+}
+
 /* No Sidebar */
 .content-wide,
 .sidebar-none .content,

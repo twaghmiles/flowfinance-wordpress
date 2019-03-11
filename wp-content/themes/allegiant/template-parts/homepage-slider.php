@@ -13,19 +13,19 @@ if ( $query->posts ) :
 		<?php $slide_count++; ?>
 		<?php $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), array( 1500, 7000 ), false, '' ); ?>
 		<div id="slide_<?php echo $slide_count; ?>" class="slide cycle-slide-active" style="background-image:url(<?php echo $image_url[0]; ?>);">
-			<!-- <div class="slide-body">
+			<div class="slide-body">
 				<div class="container">
 					<div class="slide-caption">
 						<div class="slide-content">
 							<?php the_content(); ?>
 						</div>
-						<h2 class="slide-title">
+						<!-- <h2 class="slide-title">
 							<?php the_title(); ?>
-						</h2>
-						<?php cpotheme_edit(); ?>
+						</h2> -->
+						<!-- <?php cpotheme_edit(); ?> -->
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		<?php endforeach; ?>
 	</div>
