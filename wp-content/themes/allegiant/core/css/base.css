@@ -694,9 +694,43 @@ LAYOUT
 .font-color-red {
     color: #e20613;
 }
-
 .text-center {
     text-align: center;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.top-menu-container {
+    background-color: #444449;
+    color: #dadada;
+    padding: 10px;
+}
+.top-menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+.top-menu-wrapper i {
+    cursor: pointer;
+}
+.margin-l-10 {
+    margin-left: 10px;
+}
+.margin-r-10 {
+    margin-right: 10px;
+}
+.margin-l-20 {
+    margin-left: 20px;
+}
+.twitter-icon {
+    color: #38A1F3;
+}
+.facebook-icon {
+    color: #4267b2;
+}
+.insta-icon {
+    color: #e4405f;
 }
 
 /* No Sidebar */
@@ -2559,3 +2593,11 @@ RESPONSIVE STYLES
         display: none;
     }
 }
+/* .slider-loan-calculator.container {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+.slider-container {
+    position: relative;
+} */

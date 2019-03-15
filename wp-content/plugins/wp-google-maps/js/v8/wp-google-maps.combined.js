@@ -920,7 +920,7 @@ jQuery(function($) {
 	{
 		WPGMZA.assertInstanceOf(this, "EventDispatcher");
 		
-		this._listenersByType = [];
+		this._listenersByType = {};
 	}
 
 	/**
@@ -934,8 +934,6 @@ jQuery(function($) {
 	 */
 	WPGMZA.EventDispatcher.prototype.addEventListener = function(type, listener, thisObject, useCapture)
 	{
-		var arr;
-		
 		var types = type.split(/\s+/);
 		if(types.length > 1)
 		{
@@ -947,17 +945,20 @@ jQuery(function($) {
 		
 		if(!(listener instanceof Function))
 			throw new Error("Listener must be a function");
-
-		if(!(arr = this._listenersByType[type]))
-			arr = this._listenersByType[type] = [];
-			
+	
+		var target;
+		if(!this._listenersByType.hasOwnProperty(type))
+			target = this._listenersByType[type] = [];
+		else
+			target = this._listenersByType[type];
+		
 		var obj = {
 			listener: listener,
 			thisObject: (thisObject ? thisObject : this),
 			useCapture: (useCapture ? true : false)
 			};
 			
-		arr.push(obj);
+		target.push(obj);
 	}
 
 	/**
@@ -7253,8 +7254,6 @@ jQuery(function($) {
 	
 	WPGMZA.OLInfoWindow.prototype.setContent = function(html)
 	{
-		console.log(html);
-		
 		$(this.element).html("<i class='fa fa-times ol-info-window-close' aria-hidden='true'></i>" + html);
 	}
 	
@@ -7549,16 +7548,21 @@ jQuery(function($) {
 		view.fit(extent, this.olMap.getSize());
 	}
 	
-	WPGMZA.OLMap.prototype.panTo = function(latLng)
+	WPGMZA.OLMap.prototype.panTo = function(latLng, zoom)
 	{
 		var view = this.olMap.getView();
-		view.animate({
+		var options = {
 			center: ol.proj.fromLonLat([
 				parseFloat(latLng.lng),
 				parseFloat(latLng.lat),
 			]),
 			duration: 500
-		});
+		};
+		
+		if(arguments.length > 1)
+			options.zoom = parseInt(zoom);
+		
+		view.animate(options);
 	}
 	
 	WPGMZA.OLMap.prototype.getZoom = function()

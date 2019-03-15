@@ -264,7 +264,7 @@ class AjaxTable extends Table
 			$order_column = 'id';
 		if(empty($order_dir))
 			$order_dir = 'ASC';
-		$qstr .= " ORDER BY ISNULL({$order_column}), {$order_column}+0 {$order_dir}, {$order_column}";
+		$qstr .= " ORDER BY ISNULL({$order_column}), {$order_column}+0 {$order_dir}, {$order_column} {$order_dir}";
 		
 		// Limit
 		if(isset($input_params['length']))

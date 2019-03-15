@@ -1,0 +1,57 @@
+.loan-calculator-wrapper {
+  height: 100%;
+  padding: 2em;
+  display: grid;
+  grid-row-gap: 1em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 75% 25%;
+  grid-template-areas: "slider-wrapper loan-chart-wrapper" "summary-wrapper summary-wrapper";
+}
+.slider-wrapper {
+  grid-area: slider-wrapper;
+}
+.loan-chart-wrapper {
+  grid-area: loan-chart-wrapper;
+}
+.summary-wrapper {
+  grid-area: summary-wrapper;
+  justify-self: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+}
+.amount-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.amount-title {
+  font-size: 1.3em;
+  color: #656565;
+}
+.amount-value {
+  font-size: 2em;
+  font-weight: 600;
+}
+mat-slider, .slider-values-wrapper {
+  width: 90%;
+  margin-left: 4%;
+}
+.label-wrapper, .slider-values-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-field {
+  padding: 2em 0;
+}
+mat-card.loan-calculator-card {
+  margin-top: 1em;
+}
+
+
+// material changes
+mat-form-field {
+  width: 100px;
+}

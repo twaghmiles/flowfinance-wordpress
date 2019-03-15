@@ -1,10 +1,10 @@
-=== Modula Photo Gallery ===
+=== Modula Image Gallery ===
 Contributors: machothemes, silkalns
-Tags: best gallery plugin, photo gallery, image gallery, responsive gallery, wordpress gallery plugin, wordpress portfolio plugin, masonry gallery, fancy gallery, media gallery, mosaic gallery, polaroid gallery, portfolio gallery
+Tags: best gallery plugin, image gallery, photo gallery, responsive gallery, wordpress gallery plugin, wordpress portfolio plugin, masonry gallery, fancy gallery, media gallery, mosaic gallery, polaroid gallery, portfolio gallery
 Requires at least: 4.6
 Tested up to: 5.1
 Requires PHP: 5.6
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,11 +12,11 @@ Photo Gallery by Modula - an advanced solution for Photo Gallery users. Create b
 
 == Description == 
 
-**Modula Photo Gallery** is a standalone plugin built, maintained & operated by the friendly folks over at [MachoThemes](https://www.machothemes.com/?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite).
+**Modula Image Gallery** is a standalone plugin built, maintained & operated by the friendly folks over at [MachoThemes](https://www.machothemes.com/?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite).
 
-With Modula, it's easier than ever to build a stunning [lightbox gallery](https://wp-modula.com/demo/lightbox-gallery?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite), masonry grids, custom grids and more in no more than a few clicks right from the WordPress dashboard. 
+With Modula, it's easier than ever to build stunning [lightbox galleries](https://wp-modula.com/demo/lightbox-gallery?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite), masonry grids, custom grids and more in no more than a few clicks right from the WordPress dashboard. 
 
-Modula is the best WordPress photo gallery plugin for adding custom, unique and responsive galleries to your website. There is a free version of Modula available (Modula Lite) and a premium version (Modula Pro) both of which will allow you to add amazing, fast-loading galleries to your website. 
+Modula is the best WordPress gallery plugin for adding custom, unique and responsive galleries to your website. There is a free version of Modula available (Modula Lite) and a premium version (Modula Pro) both of which will allow you to add amazing, fast-loading galleries to your website. 
 
 
 = SEE HOW EASY IT IS TO CREATE A PHOTO GALLERY WITH MODULA =
@@ -128,7 +128,7 @@ Showcase your photography portfolio in a professional and creative way with Modu
 
 * [Food Gallery](https://wp-modula.com/demo/applications/food?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite)
 
-Modula is the perfect photo gallery plugin for **food blogs** and **restaurant** websites. Let your delicious meals speak for themselves in your unique and creative galleries created with Modula. 
+Modula is the perfect image gallery plugin for **food blogs** and **restaurant** websites. Let your delicious meals speak for themselves in your unique and creative galleries created with Modula. 
 
 
 * [Pets Gallery](https://wp-modula.com/demo/applications/pets-animals?utm_source=wordpress.org&utm_medium=web&utm_campaign=Modula%20Lite)

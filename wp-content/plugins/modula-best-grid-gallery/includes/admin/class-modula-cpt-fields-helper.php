@@ -36,6 +36,13 @@ class Modula_CPT_Fields_Helper {
 				"icon"        => "dashicons dashicons-admin-generic",
 				'priority'    => 10,
 			),
+			'filters' => array(
+				'label'    => esc_html__( 'Filters', 'modula-best-grid-gallery' ),
+				'title'    => esc_html__( 'Filters', 'modula-best-grid-gallery' ),
+				"icon"     => "dashicons dashicons-filter",
+				'badge'    => esc_html__( 'PRO', 'modula-best-grid-gallery' ),
+				'priority' => 15,
+			),
 			'captions' => array(
 				'label'       => esc_html__( 'Captions', 'modula-best-grid-gallery' ),
 				'title'       => esc_html__( 'Caption Settings', 'modula-best-grid-gallery' ),
@@ -88,7 +95,6 @@ class Modula_CPT_Fields_Helper {
 	    	'responsive' => array(
 				'label'       => esc_html__( 'Responsive', 'modula-best-grid-gallery' ),
 				'title'       => esc_html__( 'Responsive Settings', 'modula-best-grid-gallery' ),
-				// 'description' => $customizations_description,
 				'badge'       => esc_html__( 'Beta', 'modula-best-grid-gallery' ),
 				"icon"        => "dashicons dashicons-smartphone",
 				'priority'    => 90,
@@ -201,6 +207,18 @@ class Modula_CPT_Fields_Helper {
 						),
 					),
 					'priority' => 110,
+				),
+				"show_navigation" => array(
+					"name"        => esc_html__( 'Show lightbox navigation', 'modula-best-grid-gallery' ),
+					"type"        => "toggle",
+					"default"     => 1,
+					'priority'    => 111,
+				),
+				"show_navigation_on_mobile" => array(
+					"name"        => esc_html__( 'Show lightbox navigation on mobile', 'modula-best-grid-gallery' ),
+					"type"        => "toggle",
+					"default"     => 0,
+					'priority'    => 112,
 				),
 				"shuffle"         => array(
 					"name"        => esc_html__( 'Shuffle images', 'modula-best-grid-gallery' ),
@@ -375,7 +393,7 @@ class Modula_CPT_Fields_Helper {
 			),
 			'responsive' => array(
 				'enable_responsive' => array(
-					"name"        => esc_html__( 'Custom responsivness', 'modula-best-grid-gallery' ),
+					"name"        => esc_html__( 'Custom responsiveness', 'modula-best-grid-gallery' ),
 					"description" => esc_html__( 'Force the gallery to show a certain number of column on tablet/mobile devices', 'modula-best-grid-gallery' ),
 					"type"        => "toggle",
 					"default"     => 0,
@@ -434,6 +452,8 @@ class Modula_CPT_Fields_Helper {
 			'margin'           => '10',
 			'randomFactor'     => '50',
 			'lightbox'         => 'lightbox2',
+			'show_navigation'  => 1,
+			'show_navigation_on_mobile' => 0,
 			'shuffle'          => 0,
 			'captionColor'     => '#ffffff',
 			'wp_field_caption' => 'none',

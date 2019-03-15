@@ -81,8 +81,6 @@ jQuery(function($) {
 	
 	WPGMZA.OLInfoWindow.prototype.setContent = function(html)
 	{
-		console.log(html);
-		
 		$(this.element).html("<i class='fa fa-times ol-info-window-close' aria-hidden='true'></i>" + html);
 	}
 	
