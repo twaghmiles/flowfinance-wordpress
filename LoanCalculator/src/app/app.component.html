@@ -1,73 +1,104 @@
-<mat-card class="loan-calculator-card">
-  <div class="loan-calculator-wrapper">
-    <div class="slider-wrapper">
-      <div class="form-field">
-        <div class="label-wrapper">
-          <span>How much money do you need?</span>
-          <mat-form-field [floatLabel]="'never'">
-            <span matPrefix>R &nbsp;</span>
-            <input matInput placeholder="Loan Amount" [value]="principal" />
-          </mat-form-field>
-        </div>
-        <div class="form-slider-wrapper">
-          <mat-slider
-            [min]="minPrincipal"
-            [max]="maxPrincipal"
-            [step]="principalStep"
-            [value]="principal"
-            (change)="onSliderChange($event, 'principal')"
-            [displayWith]="formatPrincipalLabel"
-          ></mat-slider>
-          <div class="slider-values-wrapper">
-            <span>{{ minPrincipal }}</span>
-            <span>{{ maxPrincipal }}</span>
-          </div>
-        </div>
+<div class="loan-calculator-wrapper">
+  <div class="loan-header">
+    Short Term Loans and Instalment Loans!
+  </div>
+  <div class="slider-wrapper">
+    <div class="form-field">
+      <div class="label-wrapper">
+        <span>How much money do you need?</span>
       </div>
-      <div class="form-field">
-        <div class="label-wrapper">
-          <span>How long do you need it for?</span>
-          <mat-form-field [floatLabel]="'never'">
-            <input matInput placeholder="Tenure" [value]="tenure" />
-            <span matSuffix>months</span>
-          </mat-form-field>
-        </div>
-        <div class="form-slider-wrapper">
-          <mat-slider
-            [min]="minTenure"
-            [max]="maxTenure"
-            [step]="tenureStep"
-            [value]="tenure"
-            (change)="onSliderChange($event, 'tenure')"
-          ></mat-slider>
-          <div class="slider-values-wrapper">
-            <span>{{ minTenure }}</span>
-            <span>{{ maxTenure }}</span>
-          </div>
+      <div class="form-slider-wrapper">
+        <mat-slider
+          [min]="minPrincipal"
+          [max]="maxPrincipal"
+          [step]="principalStep"
+          [value]="principal"
+          (change)="onSliderChange($event, 'principal')"
+          [displayWith]="formatPrincipalLabel"
+        ></mat-slider>
+        <div class="slider-values-wrapper">
+          <span>{{ minPrincipal }}</span>
+          <span>{{ maxPrincipal }}</span>
         </div>
       </div>
     </div>
-    <div class="loan-chart-wrapper">
-      <div
-        echarts
-        [options]="options"
-        class="demo-chart"
-        (chartInit)="onChartInit($event)"
-      ></div>
+    <div class="form-field">
+      <div class="label-wrapper">
+        <span>How long do you need it for?</span>
+      </div>
+      <div class="form-slider-wrapper">
+        <mat-slider
+          [min]="minTenure"
+          [max]="maxTenure"
+          [step]="tenureStep"
+          [value]="tenure"
+          (change)="onSliderChange($event, 'tenure')"
+          [displayWith]="formatTenurelLabel"
+        ></mat-slider>
+        <div class="slider-values-wrapper">
+          <span>{{ minTenure }}</span>
+          <span>{{ maxTenure }}</span>
+        </div>
+      </div>
+      <div class="payment-schedule-selection-wrapper">
+        <div class="duration-select-wrapper">
+          <mat-form-field>
+            <mat-select [(value)]="paymentDuration">
+              <mat-option value="monthly">Paying Monthly</mat-option>
+              <mat-option value="fortnightly">Paying Fortnightly</mat-option>
+              <mat-option value="weekly">Paying Weekly</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="duration-text">On The</div>
+        <div class="day-selection-wrapper">
+          <mat-form-field>
+            <mat-select [(value)]="paymentDuration">
+              <mat-option value="monthly">Paying Monthly</mat-option>
+              <mat-option value="fortnightly">Paying Fortnightly</mat-option>
+              <mat-option value="weekly">Paying Weekly</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
     </div>
-    <div class="summary-wrapper">
-      <div class="amount-wrapper">
-        <span class="amount-title">Principal Amount</span>
-        <span class="amount-value">{{ principal }}</span>
-      </div>
-      <div class="amount-wrapper">
-        <span class="amount-title">Interest & Fees</span>
-        <span class="amount-value">{{ interest }}</span>
-      </div>
-      <div class="amount-wrapper">
-        <span class="amount-title">Amount Payble</span>
-        <span class="amount-value">{{ total }}</span>
-      </div>
+    <div class="repayment-schedule-wrapper">
+      <mat-card class="repayment-item">
+        <div class="repayment-date">29th Mar, 2019</div>
+        <div class="repayment-amount">R 400</div>
+      </mat-card>
+      <mat-card class="repayment-item">
+        <div class="repayment-date">29th Mar, 2019</div>
+        <div class="repayment-amount">R 400</div>
+      </mat-card>
+      <mat-card class="repayment-item">
+        <div class="repayment-date">29th Mar, 2019</div>
+        <div class="repayment-amount">R 400</div>
+      </mat-card>
     </div>
   </div>
-</mat-card>
+  <div class="summary-wrapper">
+    <div class="amount-wrapper">
+      <span class="amount-title">Principal Amount</span>
+      <span class="amount-value">R {{ principal }}</span>
+    </div>
+    <div class="amount-wrapper">
+      <span class="amount-title">Interest & Fees</span>
+      <span class="amount-value">R {{ interest }}</span>
+    </div>
+    <div class="amount-wrapper">
+      <span class="amount-title">Amount Payble</span>
+      <span class="amount-value">R {{ total }}</span>
+    </div>
+    <div class="repay-wrapper">
+      <span class="repay-title">To Repay by</span>
+      <span class="repay-date">{{ payDate | date }}</span>
+    </div>
+    <div class="actions-wrapper">
+      <button mat-raised-button class="apply-button">Contact Us</button>
+      <button mat-raised-button color="primary" class="apply-button">
+        Apply
+      </button>
+    </div>
+  </div>
+</div>

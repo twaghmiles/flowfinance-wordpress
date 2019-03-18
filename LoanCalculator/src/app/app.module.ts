@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSliderModule, MatInputModule, MatFormFieldModule, MatCardModule } from '@angular/material';
+import { MatSliderModule, MatInputModule, MatFormFieldModule, MatCardModule, MatButtonModule, MatSelectModule } from '@angular/material';
 import { ChartModule } from 'angular2-chartjs';
 import { NgxEchartsModule } from 'ngx-echarts';
 
@@ -22,6 +22,8 @@ import { AppComponent } from './app.component';
     ChartModule,
     NgxEchartsModule,
     MatCardModule,
+    MatButtonModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
