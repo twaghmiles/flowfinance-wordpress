@@ -1,14 +1,8 @@
 /*
-Theme Name: Miles India
-Theme URI:https://cpothemes.com/theme/allegiant
-Description:Allegiant is a free multipurpose WordPress theme perfect for agencies and professionals. This theme comes with support for a full homepage slider, feature blocks, portfolios, services, team members, and even testimonials, all thanks to its companion plugin CPO Content Types. Allegiant is one of the best business WordPress themes thanks to its neutral design and extreme flexibility. Moreover, this theme also integrates with popular plugins such as WooCommerce, Yoast SEO, WPML, and Contact Form 7. 
-Tags: one-column, two-columns, right-sidebar, full-width-template, sticky-post, theme-options, custom-background, custom-menu, featured-images, threaded-comments, translation-ready
-Author:CPOThemes
-Author URI:https://cpothemes.com
-Version:1.2.0
-License:GNU General Public License 2.0 or later
-License URI:readme.txt
-Text Domain:allegiant
+Theme Name: Flow Finance
+Author:Miles India
+Author URI:https://www.miles.in/
+Version:1.0.0
 */
 
 /* --------------------------------------------------------------
@@ -1617,4 +1611,8 @@ RESPONSIVE STYLES
     .menu-footer li a {
         margin: 0 10px 10px 0;
     }
+}
+.wp-loan-container {
+    width: 80%;
+    margin: 0 auto;
 }

@@ -1,4 +1,7 @@
-<div class="slider-container">
+<div class="wp-loan-container">
+	<?php echo do_shortcode('[loan_calculator]'); ?>
+</div>
+<!-- <div class="slider-container">
 	<div>
 		<?php $query = new WP_Query( 'post_type=cpo_slide&posts_per_page=-1&order=ASC&orderby=menu_order' ); ?>
 		<?php
@@ -24,8 +27,8 @@
 			<?php endif; ?>
 		</div> 			
 		<?php endif; ?>
-	</div>
-	<div class="slider-loan-calculator container">
+	</div> -->
+	<!-- <div class="slider-loan-calculator container"> -->
 		<!-- <app-loan-calculator></app-loan-calculator>
 		<?php
 			$scripts = array('runtime.js', 'es2015-polyfills.js', 'polyfills.js', 'styles.js', 'vendor.js', 'main.js');
@@ -34,5 +37,5 @@
 				echo "<script src='{$dist_path}/$script'></script>";
 			}
 		?> -->
-	</div>
-</div>
+	<!-- </div>
+</div> -->
