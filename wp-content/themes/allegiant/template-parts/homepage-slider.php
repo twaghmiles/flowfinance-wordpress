@@ -1,4 +1,4 @@
-<div class="wp-loan-container">
+<div class="container">
 	<?php echo do_shortcode('[loan_calculator]'); ?>
 </div>
 <!-- <div class="slider-container">

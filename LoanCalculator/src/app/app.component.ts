@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import * as moment from 'moment';
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import * as moment from "moment";
 
 @Component({
-  selector: 'app-loan-calculator',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-loan-calculator",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent implements OnInit {
-  principal = 5000;
-  minPrincipal = 5000;
-  maxPrincipal = 50000;
-  principalStep = 5000;
-  tenure = 6;
-  minTenure = 6;
-  maxTenure = 60;
-  tenureStep = 6;
+  principal = 100;
+  minPrincipal = 100;
+  maxPrincipal = 8000;
+  principalStep = 100;
+  tenure = 3;
+  minTenure = 3;
+  maxTenure = 33;
+  tenureStep = 1;
   interestRate = 5;
   total = 0;
   interest = 0;
   payDate;
-  paymentDuration = 'monthly';
+  paymentDuration = "monthly";
 
   ngOnInit() {
     this.calculateInterest();
@@ -52,8 +53,18 @@ export class AppComponent implements OnInit {
 
   calculateInterest() {
     const currentDate = moment();
-    this.payDate = currentDate.add(this.tenure, 'M');
-    this.interest = this.principal * this.interestRate * this.tenure / (12 * 100);
+    this.payDate = currentDate.add(this.tenure, "M");
+    this.interest =
+      (this.principal * this.interestRate * this.tenure) / (12 * 100);
     this.total = this.interest + this.principal;
+  }
+
+  getUrl() {
+    const url =
+      "http://ec2-13-233-87-195.ap-south-1.compute.amazonaws.com:3001";
+    window.open(
+      `${url}/loan-calculator/${this.principal}/${this.tenure}`,
+      "_blank"
+    );
   }
 }
