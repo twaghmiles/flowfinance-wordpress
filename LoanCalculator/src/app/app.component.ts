@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
     const url =
       "http://ec2-13-233-87-195.ap-south-1.compute.amazonaws.com:3001";
     window.open(
-      `${url}/loan-calculator/${this.principal}/${this.tenure}`,
+      `${url}/loan-application/${this.principal}/${this.tenure}`,
       "_blank"
     );
   }
