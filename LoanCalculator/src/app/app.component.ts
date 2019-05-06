@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   minTenure = 3;
   maxTenure = 33;
   tenureStep = 1;
-  interestRate = 5;
+  interestRate = 60;
   total = 0;
   interest = 0;
   payDate;
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
     const currentDate = moment();
     this.payDate = currentDate.add(this.tenure, "M");
     this.interest =
-      (this.principal * this.interestRate * this.tenure) / (12 * 100);
+      Math.round((this.principal * this.interestRate * this.tenure) / (365 * 100));
     this.total = this.interest + this.principal;
   }
 
